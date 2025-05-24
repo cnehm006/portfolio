@@ -1,46 +1,135 @@
-/* Test de chargement : décommente pour tester
-body { background: #f0f8ff; }
-*/
-
-/* Typographie + padding pour navbar fixe */
-body {
-  font-family: system-ui, sans-serif;
-  margin: 0;
-  padding-top: 56px;
+:root {
+  --accent: #4e9af1;
+  --bg-light: #f8f9fa;
+  --transition: 0.6s ease-out;
 }
 
-/* Navbar transparente → blanche au scroll */
+body {
+  margin: 0;
+  padding-top: 56px;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fff;
+  color: #333;
+}
+
 .navbar {
   background: transparent;
-  transition: background 0.3s, box-shadow 0.3s;
+  transition: background var(--transition), box-shadow var(--transition);
 }
 .navbar.scrolled {
   background: #fff;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+.navbar-brand {
+  font-weight: 600;
+  color: var(--accent);
+}
+.nav-link {
+  position: relative;
+  margin: 0 0.5rem;
+  color: #fff;
+  font-size: 1rem;
+  transition: color var(--transition);
+}
+.navbar.scrolled .nav-link {
+  color: #333;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -4px;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease-out;
+}
+.nav-link:hover::after { width: 100%; }
 
-/* Sections full-screen, centrage horizontal & vertical */
 .section {
   min-height: 100vh;
   display: flex;
-  justify-content: center;  /* <-- ajouté */
   align-items: center;
-  text-align: center;       /* assure centré sur mobile aussi */
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+#about.hero {
+  background: linear-gradient(135deg, var(--accent), #67b7f1);
+  color: #fff;
+}
+#cases { background: var(--bg-light); }
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  margin-bottom: 0.5rem;
+  opacity: 0; transform: scale(0.9);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+.hero-subtitle {
+  font-size: clamp(1.25rem, 4vw, 1.75rem);
+  opacity: 0; transform: translateY(20px);
+  transition: opacity 1s 0.3s ease-out, transform 1s 0.3s ease-out;
+}
+.section-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+.section-text {
+  font-size: 1.125rem;
+  max-width: 600px;
+  margin: 0 auto;
 }
 
-/* Animation fade-in */
+.case-item .card {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: transform var(--transition), opacity var(--transition), box-shadow 0.4s ease;
+}
+.case-item .card-img-top {
+  height: 150px;
+  object-fit: cover;
+}
+.case-item .card:hover {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transform: translateY(0) scale(1.03);
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .fade-in.visible {
   opacity: 1;
-  transform: none;
+  transform: translateY(0);
+  transition: opacity var(--transition), transform var(--transition);
 }
 
-/* Études de cas : images limitées en taille */
-.case-item img {
-  max-height: 150px;
-  object-fit: cover;
+@media (max-width: 767px) {
+  .navbar-brand { font-size: 1.25rem; }
+  .nav-link { font-size: 0.95rem; }
+}
+
+@media (min-width: 768px) {
+  .row > .col-md-6:nth-child(odd) { 
+    clear: left;
+  }
+}
+
+.case-card {
+  border-radius: .75rem;
+  overflow: hidden;
+  transition: transform .4s ease, box-shadow .4s ease;
+}
+.case-card img {
+  transition: transform .4s ease, filter .4s ease;
+}
+.case-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+.case-card:hover img {
+  transform: scale(1.07);
+  filter: brightness(0.9);
 }

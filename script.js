@@ -1,10 +1,8 @@
 document.querySelectorAll('a.nav-link').forEach(link => {
   link.addEventListener('click', e => {
     e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth' });
-    }
+    document.querySelector(link.getAttribute('href'))
+            .scrollIntoView({ behavior: 'smooth' });
   });
 });
 
@@ -22,6 +20,13 @@ const observer = new IntersectionObserver((entries, obs) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.fade-in').forEach(el => {
+document.querySelectorAll('.fade-in, .case-item .card').forEach(el => {
   observer.observe(el);
+});
+
+window.addEventListener('load', () => {
+  document.querySelector('.hero-title').style.opacity = 1;
+  document.querySelector('.hero-title').style.transform = 'scale(1)';
+  document.querySelector('.hero-subtitle').style.opacity = 1;
+  document.querySelector('.hero-subtitle').style.transform = 'translateY(0)';
 });
