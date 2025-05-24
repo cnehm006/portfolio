@@ -1,0 +1,46 @@
+/* Test de chargement : décommente pour tester
+body { background: #f0f8ff; }
+*/
+
+/* Typographie + padding pour navbar fixe */
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  padding-top: 56px;
+}
+
+/* Navbar transparente → blanche au scroll */
+.navbar {
+  background: transparent;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+.navbar.scrolled {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Sections full-screen, centrage horizontal & vertical */
+.section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;  /* <-- ajouté */
+  align-items: center;
+  text-align: center;       /* assure centré sur mobile aussi */
+}
+
+/* Animation fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Études de cas : images limitées en taille */
+.case-item img {
+  max-height: 150px;
+  object-fit: cover;
+}
