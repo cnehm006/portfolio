@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portfolio – Chafic Nehme</title>
+  <title>Chafic Nehme</title>
 
-  <!-- Bootstrap CSS v4 -->
   <link
     rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
@@ -13,11 +12,9 @@
     crossorigin="anonymous"
   >
 
-  <!-- Your custom CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- NAVBAR -->
   <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
     <div class="container">
       <button
@@ -37,12 +34,12 @@
           <li class="nav-item"><a class="navbar-brand" href="#about">About</a></li>
           <li class="nav-item"><a class="navbar-brand" href="#work">How I Work</a></li>
           <li class="nav-item"><a class="navbar-brand" href="#cases">Case Studies</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="#contact">Contact</a></li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
   <section id="hero" class="position-relative d-flex align-items-center">
     <div class="container text-center">
       <h1 class="display-1 hero-name">Chafic Nehme</h1>
@@ -59,7 +56,6 @@
     </div>
   </section>
 
-  <!-- ABOUT SECTION -->
   <section id="about" class="section fade-in">
     <div class="container about-text">
       <p>I am a 2nd year</p>
@@ -69,15 +65,12 @@
     </div>
   </section>
 
-  <!-- HOW I WORK SECTION -->
   <section id="work" class="section fade-in">
     <div class="container">
       <div class="row">
-        <!-- Left label (only on md+ screens) -->
         <div class="col-2 d-none d-md-flex align-items-start justify-content-end">
           <span class="work-label">(HOW I WORK)</span>
         </div>
-        <!-- Right content -->
         <div class="col-12 col-md-10">
           <h2 class="work-title">
             I approach every project the same way a good conversation starts… by listening.
@@ -90,18 +83,16 @@
     </div>
   </section>
 
-  <!-- CASE STUDIES SECTION -->
   <section id="cases" class="section fade-in">
-    <div class="container-fluid px-0 position-relative">
+    <div class="container-fluid px-2 position-relative">
       <div class="running-line-wrapper">
         <div class="running-line">
           <span>CASE STUDIES • </span>
         </div>
       </div>
 
-      <div class="container-fluid px-0">
+      <div class="container-fluid px-2">
         <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 mb-5">
-          <!-- Service Site (arrow cursor) -->
           <div class="col d-flex">
             <a href="service.html" class="case-link w-100">
               <div class="card case-card border-0">
@@ -113,7 +104,6 @@
               </div>
             </a>
           </div>
-          <!-- Small Game (comingsoon cursor) -->
           <div class="col d-flex">
             <a href="game.html" class="case-link w-100 comingsoon">
               <div class="card case-card border-0">
@@ -125,7 +115,6 @@
               </div>
             </a>
           </div>
-          <!-- E-commerce Site (comingsoon cursor) -->
           <div class="col d-flex">
             <a href="shop.html" class="case-link w-100 comingsoon">
               <div class="card case-card border-0">
@@ -137,7 +126,6 @@
               </div>
             </a>
           </div>
-          <!-- BI Visualization (comingsoon cursor) -->
           <div class="col d-flex">
             <a href="analytics.html" class="case-link w-100 comingsoon">
               <div class="card case-card border-0">
@@ -154,14 +142,51 @@
     </div>
   </section>
 
-  <!-- jQuery + Bootstrap JS v4 -->
+  <div class="extra-space"></div>
+
+  <section id="contact" class="section fade-in">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-6 contact-heading-container">
+          <h2 class="contact-heading">LET’S<br>TALK.</h2>
+          <p class="contact-subtext">
+            Tell me about your project, your timeline, how you heard about me, and where you’re located.
+          </p>
+        </div>
+        <div class="col-12 col-lg-6">
+          <form class="contact-form" novalidate>
+            <div class="form-group">
+              <label for="name">NAME *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">EMAIL *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="company">COMPANY *</label>
+              <input type="text" id="company" name="company" required>
+            </div>
+            <div class="form-group mb-4">
+              <label for="message">MESSAGE *</label>
+              <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn" aria-label="Send Message"></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"></script>
   <script
     src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"
     crossorigin="anonymous"
   ></script>
 
-  <!-- Your custom JS -->
   <script src="script.js"></script>
+  <footer class="footer text-center py-3">
+    <span>&copy; 2025 Chafic Nehme. Made with love.</span>
+  </footer>
 </body>
 </html>

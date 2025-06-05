@@ -7,7 +7,11 @@ html {
   --navbar-height: 56px;
 }
 
-/* ── HERO & NAVBAR ── */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
 #hero {
   position: relative;
   margin-top: calc(-1 * var(--navbar-height));
@@ -65,7 +69,6 @@ html {
   color: #000;
 }
 
-/* ── CURSOR-TRAIL IMAGES ── */
 #image-trail {
   position: absolute;
   inset: 0;
@@ -104,7 +107,6 @@ html {
 .trail-img:nth-child(7) { z-index: 7; }
 .trail-img:nth-child(8) { z-index: 8; }
 
-/* ── ABOUT SECTION ── */
 .about-text {
   font-size: clamp(4rem, 10vw, 6.5rem);
   line-height: 1.1;
@@ -128,7 +130,6 @@ html {
   margin-left: 5%;
 }
 
-/* ── FADE-IN UTILITY ── */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -140,7 +141,6 @@ html {
   transform: none;
 }
 
-/* ── HOW I WORK SECTION ── */
 .work-label {
   font-size: 1rem;
   font-weight: 600;
@@ -165,7 +165,6 @@ html {
   margin-bottom: 2rem;
 }
 
-/* ── RUNNING MARQUEE ── */
 @font-face {
   font-family: 'NCLNeovibes';
   src: url('fonts/NCLNeovibes.woff') format('woff');
@@ -205,7 +204,6 @@ html {
   }
 }
 
-/* ── CASE STUDY CARDS ── */
 .case-card {
   display: flex;
   flex-direction: column;
@@ -248,17 +246,105 @@ html {
   margin: 0;
 }
 
-/* Remove default link underline */
 .case-link {
   text-decoration: none;
 }
 
-/* arrow.png on hover (centered @16 16) */
 .case-link:hover {
   cursor: url('imgs/arrow.png') 16 16, auto;
 }
 
-/* comingsoon.png on hover (centered @16 16) */
 .case-link.comingsoon:hover {
   cursor: url('imgs/comingsoon.png') 16 16, auto;
+}
+
+.extra-space {
+  height: 6rem;
+}
+
+.contact-heading-container {
+}
+
+.contact-heading {
+  font-size: clamp(6rem, 20vw, 10rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+.contact-subtext {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.contact-form {
+  max-width: 450px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 2rem;
+}
+
+.contact-form label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #000;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  color: #000;
+  resize: none;
+  transition: border-bottom-color 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #000;
+}
+
+.contact-form.was-validated input:invalid,
+.contact-form.was-validated textarea:invalid {
+  border-bottom: 1px solid #dc3545;
+}
+.contact-form.was-validated .form-group:has(input:invalid),
+.contact-form.was-validated .form-group:has(textarea:invalid) {
+  color: #dc3545;
+}
+
+.contact-form input:required:valid,
+.contact-form textarea:required:valid {
+  border-bottom: 1px solid #000;
+}
+
+.submit-btn {
+  background: url('imgs/arrow.png') no-repeat center/contain;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-image: url('imgs/reversearrow.png');
+}
+
+#contact {
+  margin-bottom: 4rem;
 }

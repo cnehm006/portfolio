@@ -92,3 +92,10 @@ function setupRunningLine() {
     }
   });
 }
+
+document.querySelectorAll('.contact-form').forEach(form => {
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    form.classList.add('was-validated');
+  });
+});
