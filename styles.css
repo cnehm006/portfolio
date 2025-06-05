@@ -214,7 +214,7 @@ html {
 }
 
 .case-card:hover {
-  border-radius: 2rem;
+  border-radius: 5rem;
 }
 
 .case-card .card-img-top {
