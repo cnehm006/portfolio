@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 :root {
@@ -23,8 +24,6 @@ html {
   color: #000 !important;
   font-weight: 500;
   text-transform: uppercase;
-  transition: color 0.3s ease, mix-blend-mode 0.3s ease;
-  mix-blend-mode: normal;
 }
 
 .navbar-nav {
@@ -42,11 +41,6 @@ html {
   padding-right: 0.5rem;
 }
 
-.navbar.over-name .navbar-brand {
-  color: #fff !important;
-  mix-blend-mode: difference;
-}
-
 .navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -54,7 +48,6 @@ html {
 
 .navbar.scrolled .navbar-brand {
   color: #000 !important;
-  mix-blend-mode: normal;
 }
 
 @font-face {
@@ -114,6 +107,7 @@ html {
   line-height: 1.1;
   font-weight: 600;
   color: #000;
+  margin-bottom: 4rem;
 }
 
 .about-text p {
@@ -123,12 +117,12 @@ html {
 
 .about-text p:nth-child(odd) {
   text-align: right;
-  margin-right: 10%;
+  margin-right: 5%;
 }
 
 .about-text p:nth-child(even) {
   text-align: left;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .fade-in {
@@ -150,7 +144,7 @@ html {
   font-display: swap;
 }
 
-.marquee-container {
+.running-line-wrapper {
   width: 100vw;
   position: relative;
   left: 50%;
@@ -158,9 +152,10 @@ html {
   overflow: hidden;
   border-bottom: 1px solid #000;
   white-space: nowrap;
+  margin-bottom: 4rem;
 }
 
-.marquee-text {
+.running-line {
   display: inline-block;
   font-family: 'NCLNeovibes', sans-serif;
   font-size: clamp(4rem, 10vw, 12rem);
@@ -168,40 +163,56 @@ html {
   text-transform: uppercase;
   white-space: nowrap;
   will-change: transform;
+  animation: run 15s linear infinite;
 }
 
-@keyframes marquee-left {
-  0% {
+@keyframes run {
+  from {
     transform: translateX(0);
   }
-  100% {
+  to {
     transform: translateX(-50%);
   }
 }
 
 .case-card {
-  aspect-ratio: 1/1;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  border-radius: 1rem;
+  transition: border-radius 0.4s ease;
+  overflow: hidden;
+  background: #fff;
+}
+
+.case-card:hover {
+  border-radius: 3rem;
 }
 
 .case-card .card-img-top {
-  flex: 1 1 auto;
+  width: 100%;
+  height: auto;
   object-fit: cover;
+  flex: 0 0 auto;
   transition: transform 0.4s ease;
 }
 
 .case-card .card-body {
-  flex: 0 0 auto;
+  flex: 1 1 auto;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0.5rem;
+  background: #fff;
 }
 
-.case-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+.case-card .card-body .card-title {
+  color: #000;
+  margin-bottom: 0.5rem;
 }
 
-.case-card:hover .card-img-top {
-  transform: scale(1.08);
+.case-card .card-body .card-text {
+  color: #000;
+  margin: 0;
 }
