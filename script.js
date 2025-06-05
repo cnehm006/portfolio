@@ -1,5 +1,6 @@
 const navbar = document.getElementById('navbar');
 const hero   = document.getElementById('hero');
+
 function checkNav() {
   navbar.classList.toggle(
     'scrolled',
@@ -15,16 +16,15 @@ window.addEventListener('load', () => {
 const trailContainer = document.getElementById('image-trail');
 const imgs           = Array.from(trailContainer.querySelectorAll('img.trail-img'));
 const count          = imgs.length;
-const threshold      = 30;
-
+const threshold      = 80;
 let lastPoint = null;
 let idx       = 0;
 
 function initTrail() {
   imgs.forEach(img => {
-    img.classList.remove('visible');
     img.style.left = '0';
     img.style.top  = '0';
+    img.classList.remove('visible');
   });
   lastPoint = null;
   idx = 0;
@@ -52,7 +52,20 @@ hero.addEventListener('mousemove', e => {
 
 function place(i, x, y) {
   const img = imgs[i];
-  img.style.left  = `${x}px`;
-  img.style.top   = `${y}px`;
+  img.style.left = `${x}px`;
+  img.style.top  = `${y}px`;
   img.classList.add('visible');
 }
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-in').forEach(el => {
+  observer.observe(el);
+});

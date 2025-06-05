@@ -1,32 +1,135 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  --navbar-height: 56px;
+}
+
 #hero {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
+  margin-top: calc(-1 * var(--navbar-height));
+  padding-top: var(--navbar-height);
+  height: calc(100vh + var(--navbar-height));
+  overflow: visible;
 }
 
 .navbar {
   background-color: transparent !important;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
-.navbar .nav-link {
+
+.navbar .navbar-brand {
+  color: #000 !important;
+  font-weight: 500;
+  transition: color 0.3s ease, mix-blend-mode 0.3s ease;
+  mix-blend-mode: normal;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navbar-nav .nav-item:first-child .navbar-brand {
+  padding-left: 0.5rem;
+}
+.navbar-nav .nav-item:last-child .navbar-brand {
+  padding-right: 0.5rem;
+}
+
+.navbar.over-name .navbar-brand {
   color: #fff !important;
-  transition: color 0.3s ease;
+  mix-blend-mode: difference;
 }
 
 .navbar.scrolled {
-  background-color: rgba(255,255,255,0.95) !important;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
-.navbar.scrolled .nav-link {
-  color: #333 !important;
+.navbar.scrolled .navbar-brand {
+  color: #000 !important;
+  mix-blend-mode: normal;
+}
+
+@font-face {
+  font-family: 'Vegur';
+  src: url('fonts/vegur_bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+.hero-name {
+  font-family: 'Vegur', sans-serif;
+  font-size: clamp(5rem, 14vw, 12rem);
+  color: #000;
 }
 
 #image-trail {
   position: absolute;
   inset: 0;
   pointer-events: none;
-  overflow: hidden;
-  z-index: 10;
+  overflow: visible;
+  z-index: 0;
+}
+#hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.trail-img {
+  position: absolute;
+  width: clamp(120px, 16vw, 200px);
+  height: auto;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: none;
+}
+.trail-img.visible {
+  opacity: 1;
+}
+
+.trail-img:nth-child(1) { z-index: 1; }
+.trail-img:nth-child(2) { z-index: 2; }
+.trail-img:nth-child(3) { z-index: 3; }
+.trail-img:nth-child(4) { z-index: 4; }
+.trail-img:nth-child(5) { z-index: 5; }
+.trail-img:nth-child(6) { z-index: 6; }
+.trail-img:nth-child(7) { z-index: 7; }
+.trail-img:nth-child(8) { z-index: 8; }
+
+.about-text {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1.1;
+  font-weight: 600;
+  color: #000;
+  margin: 2rem 0;
+}
+.about-text p {
+  margin: 0;
+  position: relative;
+}
+.about-text p:nth-child(odd) {
+  text-align: left;
+  margin-left: 10%;
+}
+.about-text p:nth-child(even) {
+  text-align: right;
+  margin-right: 10%;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .case-card {
@@ -46,56 +149,8 @@
 }
 .case-card:hover {
   transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 .case-card:hover .card-img-top {
   transform: scale(1.08);
-}
-
-#image-trail {
-  z-index: 0;
-}
-#hero .container {
-  position: relative;     
-  z-index: 1;
-}
-
-.trail-img {
-  position: absolute;
-  width: clamp(120px, 16vw, 200px);
-  height: auto;
-  pointer-events: none;
-  left: 0; top: 0;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.trail-img.visible {
-  opacity: 1;
-}
-
-
-.trail-img:nth-child(1) { z-index: 1; }
-.trail-img:nth-child(2) { z-index: 2; }
-.trail-img:nth-child(3) { z-index: 3; }
-.trail-img:nth-child(4) { z-index: 4; }
-.trail-img:nth-child(5) { z-index: 5; }
-.trail-img:nth-child(6) { z-index: 6; }
-.trail-img:nth-child(7) { z-index: 7; }
-.trail-img:nth-child(8) { z-index: 8; }
-
-
-@font-face {
-  font-family: 'Vegur';
-  src:url('fonts/vegur_bold.woff')  format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-.hero-name {
-  font-family: 'Vegur', sans-serif;
-  font-size: clamp(5rem, 14vw, 12rem);
-
 }
