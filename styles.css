@@ -22,6 +22,7 @@ html {
 .navbar .navbar-brand {
   color: #000 !important;
   font-weight: 500;
+  text-transform: uppercase;
   transition: color 0.3s ease, mix-blend-mode 0.3s ease;
   mix-blend-mode: normal;
 }
@@ -32,9 +33,11 @@ html {
   justify-content: space-between;
   align-items: center;
 }
+
 .navbar-nav .nav-item:first-child .navbar-brand {
   padding-left: 0.5rem;
 }
+
 .navbar-nav .nav-item:last-child .navbar-brand {
   padding-right: 0.5rem;
 }
@@ -48,6 +51,7 @@ html {
   background-color: rgba(255, 255, 255, 0.95) !important;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
+
 .navbar.scrolled .navbar-brand {
   color: #000 !important;
   mix-blend-mode: normal;
@@ -60,9 +64,10 @@ html {
   font-style: normal;
   font-display: swap;
 }
+
 .hero-name {
   font-family: 'Vegur', sans-serif;
-  font-size: clamp(5rem, 14vw, 12rem);
+  font-size: clamp(8rem, 20vw, 16rem);
   color: #000;
 }
 
@@ -73,6 +78,7 @@ html {
   overflow: visible;
   z-index: 0;
 }
+
 #hero .container {
   position: relative;
   z-index: 1;
@@ -89,6 +95,7 @@ html {
   opacity: 0;
   transition: none;
 }
+
 .trail-img.visible {
   opacity: 1;
 }
@@ -103,23 +110,25 @@ html {
 .trail-img:nth-child(8) { z-index: 8; }
 
 .about-text {
-  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-size: clamp(4rem, 10vw, 6.5rem);
   line-height: 1.1;
   font-weight: 600;
   color: #000;
-  margin: 2rem 0;
 }
+
 .about-text p {
   margin: 0;
   position: relative;
 }
+
 .about-text p:nth-child(odd) {
-  text-align: left;
-  margin-left: 10%;
-}
-.about-text p:nth-child(even) {
   text-align: right;
   margin-right: 10%;
+}
+
+.about-text p:nth-child(even) {
+  text-align: left;
+  margin-left: 10%;
 }
 
 .fade-in {
@@ -127,9 +136,47 @@ html {
   transform: translateY(20px);
   transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 .fade-in.visible {
   opacity: 1;
   transform: none;
+}
+
+@font-face {
+  font-family: 'NCLNeovibes';
+  src: url('fonts/NCLNeovibes.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.marquee-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  margin-left: -50vw;
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+  white-space: nowrap;
+}
+
+.marquee-text {
+  display: inline-block;
+  font-family: 'NCLNeovibes', sans-serif;
+  font-size: clamp(4rem, 10vw, 12rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 .case-card {
@@ -139,18 +186,22 @@ html {
   flex-direction: column;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
 .case-card .card-img-top {
   flex: 1 1 auto;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
+
 .case-card .card-body {
   flex: 0 0 auto;
 }
+
 .case-card:hover {
   transform: translateY(-8px) scale(1.03);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
+
 .case-card:hover .card-img-top {
   transform: scale(1.08);
 }

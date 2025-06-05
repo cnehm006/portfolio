@@ -1,15 +1,30 @@
 const navbar = document.getElementById('navbar');
 const hero   = document.getElementById('hero');
+const heroName = document.querySelector('.hero-name');
 
-function checkNav() {
-  navbar.classList.toggle(
-    'scrolled',
-    hero.getBoundingClientRect().bottom < 56
-  );
+function updateNavbarClasses() {
+  const scrollY    = window.scrollY || window.pageYOffset;
+  const heroHeight = hero.offsetHeight;
+  const navRect    = navbar.getBoundingClientRect();
+  const nameRect   = heroName.getBoundingClientRect();
+
+  if (scrollY >= heroHeight) {
+    navbar.classList.add('scrolled');
+    navbar.classList.remove('over-name');
+    return;
+  }
+  if (navRect.bottom > nameRect.bottom) {
+    navbar.classList.add('over-name');
+  } else {
+    navbar.classList.remove('over-name');
+  }
+  navbar.classList.remove('scrolled');
 }
-window.addEventListener('scroll', checkNav);
+
+window.addEventListener('scroll', updateNavbarClasses);
+window.addEventListener('resize', updateNavbarClasses);
 window.addEventListener('load', () => {
-  checkNav();
+  updateNavbarClasses();
   initTrail();
 });
 
@@ -68,4 +83,22 @@ const observer = new IntersectionObserver((entries, obs) => {
 
 document.querySelectorAll('.fade-in').forEach(el => {
   observer.observe(el);
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.marquee-text').forEach(el => {
+    const text = el.textContent.trim();
+    el.innerHTML = '';
+    const span = document.createElement('span');
+    span.textContent = text + ' ';
+    el.appendChild(span);
+    const containerWidth = el.parentElement.getBoundingClientRect().width;
+    let contentWidth = span.getBoundingClientRect().width;
+    while (contentWidth < containerWidth * 2) {
+      const clone = span.cloneNode(true);
+      el.appendChild(clone);
+      contentWidth += clone.getBoundingClientRect().width;
+    }
+    el.style.animation = `marquee-left ${Math.max(20, contentWidth / 50)}s linear infinite`;
+  });
 });
