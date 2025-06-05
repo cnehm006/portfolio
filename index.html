@@ -1,54 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio – Chafic Nehme</title>
 
-  <!-- ★  Bootstrap 4 CSS  ★ -->
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-    crossorigin="anonymous"
-  />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-  <!-- Your custom styles -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- Coming-soon modal (Bootstrap 4 markup) -->
-  <div class="modal fade" id="comingModal" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content text-center">
-        <div class="modal-header border-0">
-          <h5 class="modal-title w-100">Coming Soon 🚧</h5>
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-          I’m still polishing this case study — check back shortly!
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- /modal -->
-
-  <!-- Navbar -->
-  <nav
-    id="navbar"
-    class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top py-3"
-  >
+  <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">Chafic Nehme</a>
-
       <button
         class="navbar-toggler"
         type="button"
@@ -60,139 +25,106 @@
       >
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#work">How I Work</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#cases">Case Studies</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#work">How I Work</a></li>
+          <li class="nav-item"><a class="nav-link" href="#cases">Case Studies</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <!-- /Navbar -->
 
-  <!-- Hero / About -->
-  <section id="about" class="section hero fade-in">
+  <!-- Hero -->
+    <section id="hero" class="position-relative overflow-hidden d-flex align-items-center">
     <div class="container text-center">
-      <h1 class="hero-title">Chafic Nehme</h1>
-      <p class="hero-subtitle">
-        Software Engineering Student &amp; UI/UX Enthusiast
-      </p>
-      <p class="hero-text">
-Hello! I’m Chafic Nehme, a 2nd year software engineering student at the University of Ottawa who spends most of his free time turning ideas into purposeful, people-friendly interfaces. I’m excited to keep refining my craft and to share every lesson along the way.  </p>
+        <h1 class="display-1 hero-name">Chafic Nehme</h1>
+    </div>
+    <div id="image-trail" class="position-absolute w-100 h-100">
+        <img src="imgs/trail1.avif" class="trail-img" alt="">
+        <img src="imgs/trail2.avif" class="trail-img" alt="">
+        <img src="imgs/trail3.avif" class="trail-img" alt="">
+        <img src="imgs/trail4.avif" class="trail-img" alt="">
+        <img src="imgs/trail5.avif" class="trail-img" alt="">
+        <img src="imgs/trail6.avif" class="trail-img" alt="">
+        <img src="imgs/trail7.avif" class="trail-img" alt="">
+        <img src="imgs/trail8.avif" class="trail-img" alt="">
+    </div>
+    </section>
+
+
+  <section id="about" class="section fade-in">
+    <div class="container text-center">
+      <h1 class="hero-title">Hello, I’m Chafic Nehme</h1>
+      <p class="hero-subtitle">Software Engineering Student & UI/UX Enthusiast</p>
     </div>
   </section>
 
-  <!-- How I Work -->
   <section id="work" class="section fade-in">
     <div class="container text-center">
       <h2 class="section-title">How I Work</h2>
       <p class="section-text">
-I approach every project the same way a good conversation starts... by listening. First I gather user goals and constraints, then I sketch and prototype rapidly, iterating with accessibility and Nielsen-Norman heuristics as my guide thru all of this. This portfolio is my living lab: while I’m completing a UI-design course this term, you’ll see the methods I’m practising! User-centred design, heuristic evaluation, and rapid prototyping reflected in four upcoming case studies (a service site, a mini-game, an e-commerce experience, and a BI dashboard). Each one will document my full process. </p>
+        Currently diving deep into UI design!
+      </p>
     </div>
   </section>
 
-  <!-- Case Studies -->
-  <section id="cases" class="section fade-in">
+    <section id="cases" class="section fade-in">
     <div class="container">
-      <h2 class="section-title text-center mb-5">Case Studies</h2>
-      <div class="row">
+        <h2 class="section-title text-center mb-5">Case Studies</h2>
+        <div class="row row-cols-1 row-cols-md-2 justify-content-center g-4">
         <!-- Card 1 -->
-        <div class="col-12 col-md-6 mb-4">
-          <div
-            class="card case-card border-0 shadow-sm h-100"
-            data-toggle="modal"
-            data-target="#comingModal"
-          >
-            <img
-              src="imgs/CHA.jpeg"
-              class="card-img-top"
-              alt="Service Site"
-            />
+        <div class="col d-flex">
+            <div class="card case-card w-100 border-0 shadow-sm">
+            <img src="imgs/CHA.jpeg" class="card-img-top" alt="Service Site">
             <div class="card-body text-center">
-              <h5 class="card-title">Service Site</h5>
-              <p class="card-text">Coming Soon</p>
+                <h5 class="card-title">Service Site</h5>
+                <p class="card-text">Coming Soon</p>
             </div>
-          </div>
+            </div>
         </div>
         <!-- Card 2 -->
-        <div class="col-12 col-md-6 mb-4">
-          <div
-            class="card case-card border-0 shadow-sm h-100"
-            data-toggle="modal"
-            data-target="#comingModal"
-          >
-            <img
-              src="imgs/FIC.jpeg"
-              class="card-img-top"
-              alt="Small Game"
-            />
+        <div class="col d-flex">
+            <div class="card case-card w-100 border-0 shadow-sm">
+            <img src="imgs/FIC.jpeg" class="card-img-top" alt="Small Game">
             <div class="card-body text-center">
-              <h5 class="card-title">Small Game</h5>
-              <p class="card-text">Coming Soon</p>
+                <h5 class="card-title">Small Game</h5>
+                <p class="card-text">Coming Soon</p>
             </div>
-          </div>
+            </div>
         </div>
         <!-- Card 3 -->
-        <div class="col-12 col-md-6 mb-4">
-          <div
-            class="card case-card border-0 shadow-sm h-100"
-            data-toggle="modal"
-            data-target="#comingModal"
-          >
-            <img
-              src="imgs/CHA.jpeg"
-              class="card-img-top"
-              alt="E-commerce Site"
-            />
+        <div class="col d-flex">
+            <div class="card case-card w-100 border-0 shadow-sm">
+            <img src="imgs/CHA.jpeg" class="card-img-top" alt="E-commerce Site">
             <div class="card-body text-center">
-              <h5 class="card-title">E-commerce Site</h5>
-              <p class="card-text">Coming Soon</p>
+                <h5 class="card-title">E-commerce Site</h5>
+                <p class="card-text">Coming Soon</p>
             </div>
-          </div>
+            </div>
         </div>
         <!-- Card 4 -->
-        <div class="col-12 col-md-6 mb-4">
-          <div
-            class="card case-card border-0 shadow-sm h-100"
-            data-toggle="modal"
-            data-target="#comingModal"
-          >
-            <img
-              src="imgs/FIC.jpeg"
-              class="card-img-top"
-              alt="BI Visualization"
-            />
+        <div class="col d-flex">
+            <div class="card case-card w-100 border-0 shadow-sm">
+            <img src="imgs/FIC.jpeg" class="card-img-top" alt="BI Visualization">
             <div class="card-body text-center">
-              <h5 class="card-title">BI Visualization</h5>
-              <p class="card-text">Coming Soon</p>
+                <h5 class="card-title">BI Visualization</h5>
+                <p class="card-text">Coming Soon</p>
             </div>
-          </div>
+            </div>
         </div>
-      </div>
+        </div>
     </div>
-  </section>
+    </section>
 
-  <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+
+  <!-- jQuery + Bootstrap JS (v4) -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
     integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"
-  ></script>
+    crossorigin="anonymous"></script>
   <script
-    src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9e9Z+3wK7RXwUILDHnuZQfA5oMiw2u2Ql16Q"
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-feJIWcf8a7ATwTfS2bZL5q8GLRbYoP4hg72Feb4xSMh0kfYzR0q8+JCNib2K46Qu"
     crossorigin="anonymous"
   ></script>
 
