@@ -7,6 +7,7 @@ html {
   --navbar-height: 56px;
 }
 
+/* ── HERO & NAVBAR ── */
 #hero {
   position: relative;
   margin-top: calc(-1 * var(--navbar-height));
@@ -64,6 +65,7 @@ html {
   color: #000;
 }
 
+/* ── CURSOR-TRAIL IMAGES ── */
 #image-trail {
   position: absolute;
   inset: 0;
@@ -102,6 +104,7 @@ html {
 .trail-img:nth-child(7) { z-index: 7; }
 .trail-img:nth-child(8) { z-index: 8; }
 
+/* ── ABOUT SECTION ── */
 .about-text {
   font-size: clamp(4rem, 10vw, 6.5rem);
   line-height: 1.1;
@@ -125,6 +128,7 @@ html {
   margin-left: 5%;
 }
 
+/* ── FADE-IN UTILITY ── */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -136,6 +140,32 @@ html {
   transform: none;
 }
 
+/* ── HOW I WORK SECTION ── */
+.work-label {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #212529;
+}
+
+.work-title {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #212529;
+}
+
+.work-text {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  color: #212529;
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+/* ── RUNNING MARQUEE ── */
 @font-face {
   font-family: 'NCLNeovibes';
   src: url('fonts/NCLNeovibes.woff') format('woff');
@@ -175,6 +205,7 @@ html {
   }
 }
 
+/* ── CASE STUDY CARDS ── */
 .case-card {
   display: flex;
   flex-direction: column;
@@ -185,7 +216,7 @@ html {
 }
 
 .case-card:hover {
-  border-radius: 3rem;
+  border-radius: 2rem;
 }
 
 .case-card .card-img-top {
@@ -193,7 +224,7 @@ html {
   height: auto;
   object-fit: cover;
   flex: 0 0 auto;
-  transition: transform 0.4s ease;
+  transition: none;
 }
 
 .case-card .card-body {
@@ -215,4 +246,19 @@ html {
 .case-card .card-body .card-text {
   color: #000;
   margin: 0;
+}
+
+/* Remove default link underline */
+.case-link {
+  text-decoration: none;
+}
+
+/* arrow.png on hover (centered @16 16) */
+.case-link:hover {
+  cursor: url('imgs/arrow.png') 16 16, auto;
+}
+
+/* comingsoon.png on hover (centered @16 16) */
+.case-link.comingsoon:hover {
+  cursor: url('imgs/comingsoon.png') 16 16, auto;
 }
