@@ -1,0 +1,680 @@
+/*-----------------------------------
+  Éclat Salon – styles.css
+------------------------------------*/
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Color Variables (brand) */
+:root {
+  --sage: #A3B18A;
+  --warm-brown: #756256;
+  --cream: #F5F3EE;
+  --white: #FFFFFF;
+  --dark-text: #333333;
+  --light-text: #F9F9F9;
+  --gray-bg: #F2F2F2;
+  --red-accent: #B33A3A;
+}
+
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--dark-text);
+  background-color: var(--cream);
+}
+
+/* Utility Classes */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* BUTTON STYLES */
+.btn {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.btn-primary {
+  background-color: var(--sage);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+}
+.btn-primary:hover {
+  background-color: var(--warm-brown);
+}
+.btn-secondary {
+  background-color: var(--warm-brown);
+  color: var(--white);
+  padding: 0.75rem 2rem;
+}
+.btn-secondary:hover {
+  background-color: var(--dark-text);
+}
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: transparent;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+.navbar.scrolled {
+  background-color: var(--white);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+.nav-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--warm-brown);
+  text-decoration: none;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav-links li a {
+  color: var(--dark-text);
+  font-weight: 500;
+  text-decoration: none;
+}
+.nav-links li a:hover {
+  color: var(--warm-brown);
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--dark-text);
+  border-radius: 3px;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  position: absolute;
+  left: 0;
+}
+.hamburger::before {
+  top: -8px;
+}
+.hamburger::after {
+  bottom: -8px;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.6);
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.4);
+}
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: var(--white);
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+}
+.hero-content h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* SECTIONS */
+.section {
+  padding: 4rem 0;
+}
+
+/* SECTION TITLES */
+.section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--warm-brown);
+  text-align: center;
+}
+.section-subtitle {
+  font-size: 1rem;
+  color: var(--dark-text);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* OUR SERVICES GRID */
+.services-section {
+  background-color: var(--white);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.service-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.service-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.service-card:hover img {
+  transform: scale(1.05);
+}
+.service-tag {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: var(--sage);
+  color: var(--white);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+/* BOOKING SECTION */
+.booking-section {
+  background-color: var(--cream);
+}
+.booking-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+}
+.booking-left,
+.booking-right {
+  flex: 1 1 400px;
+}
+.booking-left {
+  text-align: center;
+}
+.booking-left h2 {
+  text-align: left;
+  margin-bottom: 0.5rem;
+}
+.booking-left p {
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.booking-image {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+
+/* CALENDAR STYLING */
+.booking-calendar {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  margin-bottom: 2rem;
+}
+.booking-calendar h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+.calendar-table th,
+.calendar-table td {
+  text-align: center;
+  padding: 0.5rem;
+  color: var(--dark-text);
+  font-size: 0.9rem;
+}
+.calendar-table th {
+  font-weight: 600;
+}
+.calendar-table td {
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.calendar-table td:hover {
+  background-color: var(--sage);
+  color: var(--white);
+  border-radius: 5px;
+}
+.calendar-table .today {
+  background-color: var(--warm-brown);
+  color: var(--white);
+  border-radius: 5px;
+}
+
+.working-hours {
+  margin-top: 1rem;
+}
+.working-hours h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.working-hours ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.working-hours ul li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+}
+
+/* BOOKING FORM */
+.booking-form {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.booking-form h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--warm-brown);
+}
+.booking-form .form-group {
+  margin-bottom: 1rem;
+}
+.booking-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+.booking-form input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+.booking-form button {
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+/* OUR PRODUCTS GRID */
+.products-section {
+  background-color: var(--white);
+}
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  height: 370px; /* Increased height to fit full image */
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  overflow: hidden;
+}
+.product-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain; /* Show full image, not cropped */
+  object-position: center;
+  background: #f8f8f8;
+  flex-shrink: 0;
+  display: block;
+  border-radius: 0;
+  margin: 0;
+}
+.product-info {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 1rem 1rem 0.5rem 1rem;
+}
+.product-desc {
+  font-size: 0.8rem;
+  color: #666;
+  margin: 0.1rem 0 0.2rem 0;
+  font-weight: 400;
+  line-height: 1.2;
+}
+.price {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-top: 0.25rem;
+}
+.add-cart {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--warm-brown);
+  color: var(--white);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add-cart:hover {
+  background-color: var(--dark-text);
+}
+.products-section .text-center {
+  margin-top: 2rem;
+}
+
+/* WHY CHOOSE US */
+.why-section {
+  background-color: var(--warm-brown);
+  color: var(--light-text);
+  padding-bottom: 3rem;
+}
+.why-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.why-header h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.why-header p {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 2rem;
+}
+.why-card {
+  background-color: var(--cream);
+  color: var(--dark-text);
+  border-radius: 15px;
+  padding: 1.5rem;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.why-icon {
+  width: 40px;
+  margin-bottom: 1rem;
+}
+.why-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+.why-card p {
+  font-size: 0.9rem;
+}
+.why-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 2.5rem;
+}
+.stat h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.stat p {
+  font-size: 0.9rem;
+}
+
+/* OUR TEAM */
+.team-section {
+  background-color: var(--white);
+}
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.team-card {
+  background-color: var(--cream);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  text-align: center;
+  padding: 1rem;
+}
+.team-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+.team-card h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  margin: 0.8rem 0 0.3rem;
+}
+.role {
+  font-size: 0.9rem;
+  color: var(--warm-brown);
+}
+.team-section .text-center {
+  margin-top: 2rem;
+}
+
+/* FOOTER */
+.footer {
+  background-color: var(--dark-text);
+  color: var(--light-text);
+  padding-top: 3rem;
+}
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+}
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1 1 250px;
+}
+.footer-left h3,
+.footer-right h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+.footer-left p,
+.footer-right p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+}
+.social-icons img {
+  width: 25px;
+  filter: invert(1);
+  transition: opacity 0.3s ease;
+}
+.social-icons img:hover {
+  opacity: 0.7;
+}
+.footer-logo {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--light-text);
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+.footer-btn {
+  margin-bottom: 1.5rem;
+}
+.newsletter p {
+  margin-bottom: 0.5rem;
+}
+.newsletter form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.newsletter button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--red-accent);
+  color: var(--light-text);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.newsletter button:hover {
+  background-color: var(--warm-brown);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #111;
+  font-size: 0.8rem;
+}
+.footer-bottom a {
+  color: var(--light-text);
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+.footer-bottom a:hover {
+  text-decoration: underline;
+}
+.footer-bottom p {
+  margin: 0.3rem 0;
+}
+
+/* RESPONSIVE LAYOUT */
+@media (max-width: 992px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: var(--white);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .nav-links li {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-container {
+    flex-direction: column;
+  }
+  .why-stats {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .calendar-table th,
+  .calendar-table td {
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+}

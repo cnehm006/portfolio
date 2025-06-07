@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Éclat Salon – Organic Hair Studio</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="nav-logo">Éclat Salon</a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#booking">Booking</a></li>
+        <li><a href="#products">Our Products</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#team">Our Team</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <header id="home" class="hero">
+    <img src="images/hero-image.jpg" alt="Hair studio hero image" class="hero-img" />
+    <div class="hero-overlay"></div>
+    <div class="hero-content container">
+      <h1>Get the Hairstyle<br />You Deserve</h1>
+      <p>
+        Discover a world of sophistication and personalized beauty at Éclat Salon. Our
+        studio is more than just a place for haircuts—it’s a haven where your unique style
+        takes center stage.
+      </p>
+      <a href="#booking" class="btn btn-primary">Book Appointment</a>
+    </div>
+  </header>
+
+  <!-- OUR SERVICES SECTION -->
+  <section id="services" class="section services-section">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">
+        Beyond haircuts, discover our full range of services—from coloring to treatments.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <img src="images/service-cut.jpg" alt="Haircuts" />
+          <div class="service-tag">Haircuts</div>
+        </div>
+        <div class="service-card">
+          <img src="images/service-style.jpg" alt="Hairstyles" />
+          <div class="service-tag">Hairstyles</div>
+        </div>
+        <div class="service-card">
+          <img src="images/service-color.jpg" alt="Coloring" />
+          <div class="service-tag">Coloring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING SECTION -->
+  <section id="booking" class="section booking-section">
+    <div class="container booking-container">
+      <div class="booking-left">
+        <h2 class="section-title">Booking</h2>
+        <p class="section-subtitle">
+          Ready for a transformative experience? Book your appointment now at Éclat Salon
+          and let us craft a style that defines you.
+        </p>
+        <img src="images/booking-image.jpg" alt="Booking image" class="booking-image" />
+      </div>
+      <div class="booking-right">
+        <div class="booking-calendar">
+          <h3>Choose a Date</h3>
+          <!-- Simple static calendar for January 2024 -->
+          <table class="calendar-table">
+            <thead>
+              <tr>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+                <th>Sun</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
+              </tr>
+              <tr>
+                <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
+              </tr>
+              <tr>
+                <td>12</td><td>13</td><td>14</td><td>15</td>
+                <td class="today">16</td>
+                <td>17</td><td>18</td>
+              </tr>
+              <tr>
+                <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
+              </tr>
+              <tr>
+                <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="working-hours">
+            <h4>Working Hours</h4>
+            <ul>
+              <li>Monday – Friday: 9AM – 8PM</li>
+              <li>Saturday: 10AM – 6PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="booking-form">
+          <h3>We Will Call You</h3>
+          <form id="contactForm">
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input type="text" id="firstName" required />
+            </div>
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" required />
+            </div>
+            <button type="submit" class="btn btn-primary">Book Appointment</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR PRODUCTS SECTION -->
+  <section id="products" class="section products-section">
+    <div class="container">
+      <h2 class="section-title">Our Products</h2>
+      <p class="section-subtitle">
+        Experience the difference with top-tier products that enhance both the aesthetics
+        and health of your hair.
+      </p>
+      <div class="products-grid">
+        <div class="product-card">
+          <img src="images/product-1.jpg" alt="Curl Refiner" />
+          <div class="product-info">
+            <h4>CURL REFINER</h4>
+            <p class="product-desc">Curl Defining Cream Primer</p>
+            <span class="price">$55</span>
+          </div>
+          <button class="btn btn-sm add-cart">🛒</button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-2.jpg" alt="Cream Serum" />
+          <div class="product-info">
+            <h4>FULL SWIRL CREAM SERUM</h4>
+            <p class="product-desc">2-in-1 Moisturizing Anti-Frizz Hair Serum</p>
+            <span class="price">$25</span>
+          </div>
+          <button class="btn btn-sm add-cart">🛒</button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-3.jpg" alt="Anti-Frizz" />
+          <div class="product-info">
+            <h4>RINGLET ANTI-FRIZZ PERFECTING LOTION</h4>
+            <p class="product-desc">Anti-frizz primer for curl control and definition</p>
+            <span class="price">$18</span>
+          </div>
+          <button class="btn btn-sm add-cart">🛒</button>
+        </div>
+        <div class="product-card">
+          <img src="images/product-4.jpg" alt="Gray Hair Shampoo" />
+          <div class="product-info">
+            <h4>COLOR EXTEND GRAYDIENT SHAMPOO</h4>
+            <p class="product-desc">A color-depositing shampoo to tone and nourish gray and silver hair</p>
+            <span class="price">$18</span>
+          </div>
+          <button class="btn btn-sm add-cart">🛒</button>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-secondary">Open Store</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section id="why" class="section why-section">
+    <div class="container">
+      <div class="why-header">
+        <h2 class="section-title light-text">Why Choose Us</h2>
+        <p class="why-intro light-text">
+          Lorem ipsum is simply dummy text of the printing and typesetting industry.
+        </p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card light-bg">
+          <img src="images/icon-experts.png" alt="Expert Team Icon" class="why-icon" />
+          <h4>Professional Stylists</h4>
+          <p>
+            Our team of highly skilled and experienced stylists is dedicated to staying on
+            the cutting edge of industry trends. Trust us to transform your vision into a
+            stunning reality.
+          </p>
+        </div>
+        <div class="why-card light-bg">
+          <img src="images/icon-personalized.png" alt="Personalized Icon" class="why-icon" />
+          <h4>Personalized Service</h4>
+          <p>
+            Your unique style is our priority. Enjoy personalized consultations with our
+            stylists to ensure a haircut that complements your features, lifestyle, and
+            fashion preferences.
+          </p>
+        </div>
+        <div class="why-card light-bg">
+          <img src="images/icon-trend.png" alt="Trend Icon" class="why-icon" />
+          <h4>Trendsetting</h4>
+          <p>
+            We’re not just following trends—we’re setting them. Step into the latest fashion
+            with our trendsetting styles that keep you ahead of the curve.
+          </p>
+        </div>
+        <div class="why-card light-bg">
+          <img src="images/icon-quality.png" alt="Quality Icon" class="why-icon" />
+          <h4>Quality Products</h4>
+          <p>
+            We go above & beyond using only the best, top-tier hair care and styling
+            products to ensure not only a flawless finish but also the long-term health of
+            your hair.
+          </p>
+        </div>
+      </div>
+      <div class="why-stats">
+        <div class="stat">
+          <h3>30k</h3>
+          <p>Satisfied Clients</p>
+        </div>
+        <div class="stat">
+          <h3>15</h3>
+          <p>Salons Across the City</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR TEAM  -->
+  <section id="team" class="section team-section">
+    <div class="container">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">
+        Entrust your locks to our team of skilled and creative stylists.
+      </p>
+      <div class="team-grid">
+        <div class="team-card">
+          <img src="images/team-1.jpg" alt="Olivia Smith" />
+          <h4>Olivia Smith</h4>
+          <span class="role">Hairdresser</span>
+        </div>
+        <div class="team-card">
+          <img src="images/team-2.jpg" alt="Amelia Brown" />
+          <h4>Amelia Brown</h4>
+          <span class="role">Hairdresser</span>
+        </div>
+        <div class="team-card">
+          <img src="images/team-3.jpg" alt="Emily Walker" />
+          <h4>Emily Walker</h4>
+          <span class="role">Senior Stylist</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary">Join the Team</button>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact" class="footer">
+    <div class="container footer-container">
+      <div class="footer-left">
+        <h3>Contact Us</h3>
+        <p>(819) 555-1234<br />info@eclatsalon.ca</p>
+        <h3>Visit Us</h3>
+        <p>45 Laurier Street, Gatineau, QC<br />J8X 3V5, Canada</p>
+        <div class="social-icons">
+          <a href="#"><img src="images/icon-youtube.png" alt="YouTube" /></a>
+          <a href="#"><img src="images/icon-facebook.png" alt="Facebook" /></a>
+          <a href="#"><img src="images/icon-twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/icon-instagram.png" alt="Instagram" /></a>
+          <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn" /></a>
+        </div>
+      </div>
+
+      <div class="footer-center">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3![…your‐embed‐code…]"
+          width="100%"
+          height="250"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+
+      <div class="footer-right">
+        <a href="#" class="footer-logo">Éclat Salon</a>
+        <button class="btn btn-primary footer-btn">Book Your Consultation</button>
+        <div class="newsletter">
+          <p>Subscribe to the newsletter</p>
+          <form id="newsletterForm">
+            <input type="email" placeholder="Email" required />
+            <button type="submit" class="btn btn-secondary">→</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p><a href="#">Sitemap</a> • <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
+      <p>© 2025 Éclat Salon. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
