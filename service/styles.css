@@ -208,6 +208,7 @@ body {
   border-radius: 15px;
   cursor: pointer;
   transition: transform 0.3s ease;
+  background: #ffffff;
 }
 .service-card img {
   width: 100%;
@@ -368,7 +369,7 @@ body {
   align-items: stretch;
   justify-content: flex-start;
   height: 370px;
-  background: #fff;
+  background: var(--cream);
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
   overflow: hidden;
@@ -378,7 +379,7 @@ body {
   height: 220px;
   object-fit: contain;
   object-position: center;
-  background: #f8f8f8;
+  background: #ffffff;
   flex-shrink: 0;
   display: block;
   border-radius: 0;
@@ -404,22 +405,7 @@ body {
   font-weight: 600;
   margin-top: 0.25rem;
 }
-.add-cart {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: var(--warm-brown);
-  color: var(--white);
-  border-radius: 50%;
-  width: 35px;
-  height: 35px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.add-cart:hover {
-  background-color: var(--dark-text);
-}
+
 .products-section .text-center {
   margin-top: 2rem;
 }
