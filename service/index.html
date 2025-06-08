@@ -4,16 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Éclat Salon – Organic Hair Studio</title>
-  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap"
     rel="stylesheet"
   />
-  <!-- Main CSS -->
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- NAVIGATION -->
   <nav class="navbar">
     <div class="container nav-container">
       <a href="#" class="nav-logo">Éclat Salon</a>
@@ -33,7 +30,6 @@
     </div>
   </nav>
 
-  <!-- HERO SECTION -->
   <header id="home" class="hero">
     <img src="images/hero-image.jpg" alt="Hair studio hero image" class="hero-img" />
     <div class="hero-overlay"></div>
@@ -48,7 +44,23 @@
     </div>
   </header>
 
-  <!-- OUR SERVICES SECTION -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <h2 class="section-title">About Éclat Salon</h2>
+      <p class="section-subtitle">
+        Founded in 2017 by <strong>Amélie Tremblay</strong>, Éclat Salon is dedicated to delivering
+        a premium hair experience using eco-friendly, cruelty-free products. Tucked away in the
+        vibrant Marché By district of Gatineau, our salon has a “Green & Chic” philosophy:
+      </p>
+      <ul class="about-list">
+        <li>100% organic, sulfate-free haircare</li>
+        <li>Personalized styling consultations</li>
+        <li>Warm, modern atmosphere</li>
+        <li>Recycling and composting of all packaging</li>
+      </ul>
+    </div>
+  </section>
+
   <section id="services" class="section services-section">
     <div class="container">
       <h2 class="section-title">Our Services</h2>
@@ -65,14 +77,13 @@
           <div class="service-tag">Hairstyles</div>
         </div>
         <div class="service-card">
-          <img src="images/service-color.jpg" alt="Coloring" />
+          <img src="images/service-color.jpg" alt="Coloring" class="service-img-fit" />
           <div class="service-tag">Coloring</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BOOKING SECTION -->
   <section id="booking" class="section booking-section">
     <div class="container booking-container">
       <div class="booking-left">
@@ -86,37 +97,16 @@
       <div class="booking-right">
         <div class="booking-calendar">
           <h3>Choose a Date</h3>
-          <!-- Simple static calendar for January 2024 -->
           <table class="calendar-table">
             <thead>
-              <tr>
-                <th>Mon</th>
-                <th>Tue</th>
-                <th>Wed</th>
-                <th>Thu</th>
-                <th>Fri</th>
-                <th>Sat</th>
-                <th>Sun</th>
-              </tr>
+              <tr><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun</th></tr>
             </thead>
             <tbody>
-              <tr>
-                <td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td>
-              </tr>
-              <tr>
-                <td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td>
-              </tr>
-              <tr>
-                <td>12</td><td>13</td><td>14</td><td>15</td>
-                <td class="today">16</td>
-                <td>17</td><td>18</td>
-              </tr>
-              <tr>
-                <td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td>
-              </tr>
-              <tr>
-                <td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td>
-              </tr>
+              <tr><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td><td>4</td></tr>
+              <tr><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr>
+              <tr><td>12</td><td>13</td><td>14</td><td>15</td><td class="today">16</td><td>17</td><td>18</td></tr>
+              <tr><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td></tr>
+              <tr><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td><td></td></tr>
             </tbody>
           </table>
           <div class="working-hours">
@@ -129,7 +119,7 @@
           </div>
         </div>
         <div class="booking-form">
-          <h3>We Will Call You</h3>
+          <h3>We'll give you a call!</h3>
           <form id="contactForm">
             <div class="form-group">
               <label for="firstName">First Name</label>
@@ -154,7 +144,6 @@
     </div>
   </section>
 
-  <!-- OUR PRODUCTS SECTION -->
   <section id="products" class="section products-section">
     <div class="container">
       <h2 class="section-title">Our Products</h2>
@@ -206,13 +195,12 @@
     </div>
   </section>
 
-  <!-- WHY CHOOSE US SECTION -->
   <section id="why" class="section why-section">
     <div class="container">
       <div class="why-header">
         <h2 class="section-title light-text">Why Choose Us</h2>
         <p class="why-intro light-text">
-          Lorem ipsum is simply dummy text of the printing and typesetting industry.
+          Discover why clients trust Éclat Salon for expert care, personalized service, and trendsetting style.
         </p>
       </div>
       <div class="why-grid">
@@ -265,7 +253,6 @@
     </div>
   </section>
 
-  <!-- OUR TEAM  -->
   <section id="team" class="section team-section">
     <div class="container">
       <h2 class="section-title">Our Team</h2>
@@ -304,43 +291,61 @@
         <p>45 Laurier Street, Gatineau, QC<br />J8X 3V5, Canada</p>
         <div class="social-icons">
           <a href="#"><img src="images/icon-youtube.png" alt="YouTube" /></a>
-          <a href="#"><img src="images/icon-facebook.png" alt="Facebook" /></a>
-          <a href="#"><img src="images/icon-twitter.png" alt="Twitter" /></a>
+          <a href="#"><img src="images/icon-meta.png" alt="Meta" /></a>
+          <a href="#"><img src="images/icon-x.png" alt="X" /></a>
           <a href="#"><img src="images/icon-instagram.png" alt="Instagram" /></a>
           <a href="#"><img src="images/icon-linkedin.png" alt="LinkedIn" /></a>
         </div>
       </div>
-
       <div class="footer-center">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3![…your‐embed‐code…]"
-          width="100%"
-          height="250"
-          style="border:0;"
-          allowfullscreen=""
-          loading="lazy"
-        ></iframe>
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.1234567890123!2d-75.69123456789012!3d45.421234567890123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cce043abcd12345%3A0xabcdef1234567890!2s45%20Laurier%20St%2C%20Gatineau%2C%20QC%20J8X%203V5%2C%20Canada!5e0!3m2!1sen!2sus!4v1696543210000!5m2!1sen!2sus"
+          width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
       </div>
-
       <div class="footer-right">
         <a href="#" class="footer-logo">Éclat Salon</a>
         <button class="btn btn-primary footer-btn">Book Your Consultation</button>
-        <div class="newsletter">
-          <p>Subscribe to the newsletter</p>
-          <form id="newsletterForm">
-            <input type="email" placeholder="Email" required />
-            <button type="submit" class="btn btn-secondary">→</button>
-          </form>
-        </div>
+        <div id="newsletter-root"></div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <p><a href="#">Sitemap</a> • <a href="#">Privacy Policy</a> • <a href="#">Terms of Service</a></p>
       <p>© 2025 Éclat Salon. All Rights Reserved.</p>
     </div>
   </footer>
-
   <script src="script.js"></script>
+
+  <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    const { useState } = React;
+    function NewsletterForm() {
+      const [email, setEmail] = useState("");
+      const handleSubmit = e => {
+        e.preventDefault();
+        if (!email) return;
+        alert(`Thanks for subscribing with ${email}!`);
+        setEmail("");
+      };
+      return (
+        <div className="newsletter-component">
+          <p>Subscribe to the newsletter</p>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="Email"
+              value={email}
+              onChange={e => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit" className="btn btn-secondary">→</button>
+          </form>
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("newsletter-root")).render(<NewsletterForm />);
+  </script>
 </body>
 </html>

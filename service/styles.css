@@ -1,11 +1,5 @@
-/*-----------------------------------
-  Éclat Salon – styles.css
-------------------------------------*/
-
-/* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Roboto:wght@300;400;500&display=swap');
 
-/* Color Variables (brand) */
 :root {
   --sage: #A3B18A;
   --warm-brown: #756256;
@@ -17,7 +11,6 @@
   --red-accent: #B33A3A;
 }
 
-/* Global Resets */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -34,14 +27,12 @@ body {
   background-color: var(--cream);
 }
 
-/* Utility Classes */
 .container {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* BUTTON STYLES */
 .btn {
   display: inline-block;
   font-family: 'Montserrat', sans-serif;
@@ -74,7 +65,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* NAVBAR */
 .navbar {
   position: fixed;
   top: 0;
@@ -143,7 +133,6 @@ body {
   bottom: -8px;
 }
 
-/* HERO */
 .hero {
   position: relative;
   width: 100%;
@@ -185,12 +174,10 @@ body {
   margin-bottom: 1.5rem;
 }
 
-/* SECTIONS */
 .section {
   padding: 4rem 0;
 }
 
-/* SECTION TITLES */
 .section-title {
   font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
@@ -206,7 +193,6 @@ body {
   margin-bottom: 2rem;
 }
 
-/* OUR SERVICES GRID */
 .services-section {
   background-color: var(--white);
 }
@@ -245,7 +231,6 @@ body {
   font-weight: 600;
 }
 
-/* BOOKING SECTION */
 .booking-section {
   background-color: var(--cream);
 }
@@ -276,7 +261,6 @@ body {
   margin-top: 1rem;
 }
 
-/* CALENDAR STYLING */
 .booking-calendar {
   background-color: var(--white);
   padding: 1.5rem;
@@ -337,7 +321,6 @@ body {
   margin-bottom: 0.5rem;
 }
 
-/* BOOKING FORM */
 .booking-form {
   background-color: var(--white);
   padding: 1.5rem;
@@ -370,7 +353,6 @@ body {
   margin-top: 0.5rem;
 }
 
-/* OUR PRODUCTS GRID */
 .products-section {
   background-color: var(--white);
 }
@@ -385,7 +367,7 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: flex-start;
-  height: 370px; /* Increased height to fit full image */
+  height: 370px;
   background: #fff;
   border-radius: 1rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.04);
@@ -394,7 +376,7 @@ body {
 .product-card img {
   width: 100%;
   height: 220px;
-  object-fit: contain; /* Show full image, not cropped */
+  object-fit: contain;
   object-position: center;
   background: #f8f8f8;
   flex-shrink: 0;
@@ -442,7 +424,6 @@ body {
   margin-top: 2rem;
 }
 
-/* WHY CHOOSE US */
 .why-section {
   background-color: var(--warm-brown);
   color: var(--light-text);
@@ -501,7 +482,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* OUR TEAM */
 .team-section {
   background-color: var(--white);
 }
@@ -512,17 +492,21 @@ body {
   margin-top: 2rem;
 }
 .team-card {
-  background-color: var(--cream);
+  background-color: #f7f7f7;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
   text-align: center;
   padding: 1rem;
 }
+.team-card:nth-child(2) {
+  background-color: #e6e6e6;
+}
 .team-card img {
-  width: 100%;
+  width: 45%;
   height: 200px;
   object-fit: cover;
+  object-position: top;
 }
 .team-card h4 {
   font-family: 'Montserrat', sans-serif;
@@ -537,7 +521,6 @@ body {
   margin-top: 2rem;
 }
 
-/* FOOTER */
 .footer {
   background-color: var(--dark-text);
   color: var(--light-text);
@@ -635,7 +618,6 @@ body {
   margin: 0.3rem 0;
 }
 
-/* RESPONSIVE LAYOUT */
 @media (max-width: 992px) {
   .nav-links {
     position: absolute;
@@ -677,4 +659,30 @@ body {
     padding: 0.4rem;
     font-size: 0.8rem;
   }
+}
+
+.newsletter-component p {
+  margin-bottom: 0.5rem;
+}
+.newsletter-component form {
+  display: flex;
+  gap: 0.5rem;
+}
+.newsletter-component input {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.newsletter-component button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: var(--red-accent);
+  color: var(--light-text);
+  border-radius: 5px;
+  cursor: pointer;
+}
+.newsletter-component button:hover {
+  background-color: var(--warm-brown);
 }
