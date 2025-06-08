@@ -96,9 +96,12 @@ body {
   gap: 1.5rem;
 }
 .nav-links li a {
-  color: var(--dark-text);
+  color: var(--cream);
   font-weight: 500;
   text-decoration: none;
+}
+.navbar.scrolled .nav-links li a {
+  color: var(--dark-text);
 }
 .nav-links li a:hover {
   color: var(--warm-brown);
