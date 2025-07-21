@@ -258,6 +258,24 @@ html {
   cursor: url('imgs/comingsoon.png') 16 16, auto;
 }
 
+.navbar-nav .nav-item:last-child .navbar-brand:hover {
+  cursor: url('imgs/comingsoon.png') 16 16, auto;
+}
+
+.submit-btn {
+  background: url('imgs/arrow.png') no-repeat center/contain;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.submit-btn:hover {
+  background-image: url('imgs/reversearrow.png');
+  cursor: url('imgs/comingsoon.png') 16 16, auto;
+}
+
 .extra-space {
   height: 6rem;
 }
@@ -330,21 +348,4 @@ html {
 .contact-form input:required:valid,
 .contact-form textarea:required:valid {
   border-bottom: 1px solid #000;
-}
-
-.submit-btn {
-  background: url('imgs/arrow.png') no-repeat center/contain;
-  border: none;
-  width: 3.5rem;
-  height: 3.5rem;
-  cursor: pointer;
-  margin-top: 1rem;
-}
-
-.submit-btn:hover {
-  background-image: url('imgs/reversearrow.png');
-}
-
-#contact {
-  margin-bottom: 4rem;
 }
