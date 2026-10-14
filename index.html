@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chafic Nehme</title>
+  <title>Chafic Nehme — Software Engineering Portfolio</title>
+  <meta name="description" content="Chafic Nehme, fourth-year software engineering student at the University of Ottawa. Explore selected web and browser-extension projects.">
 
   <link
     rel="stylesheet"
@@ -33,7 +34,7 @@
           <li class="nav-item"><a class="navbar-brand" href="#">Chafic Nehme</a></li>
           <li class="nav-item"><a class="navbar-brand" href="#about">About</a></li>
           <li class="nav-item"><a class="navbar-brand" href="#work">How I Work</a></li>
-          <li class="nav-item"><a class="navbar-brand" href="#cases">Case Studies</a></li>
+          <li class="nav-item"><a class="navbar-brand" href="#cases">Selected Work</a></li>
           <li class="nav-item"><a class="navbar-brand" href="#contact">Contact</a></li>
         </ul>
       </div>
@@ -58,10 +59,10 @@
 
   <section id="about" class="section fade-in">
     <div class="container about-text">
-      <p>I am a 3rd year</p>
+      <p>I am a 4th year</p>
       <p>software engineering</p>
-      <p>student at uOttawa who spends</p>
-      <p>his free time turning ideas into cool interfaces.</p>
+      <p>student at uOttawa,</p>
+      <p>building useful software and thoughtful interfaces.</p>
     </div>
   </section>
 
@@ -76,63 +77,51 @@
             I approach every project the same way a good conversation starts… by listening.
           </h2>
           <p class="work-text">
-            First I gather user goals and constraints, then I sketch and prototype rapidly, iterating with accessibility and Nielsen-Norman heuristics as my guide through all of this. This portfolio is my living lab: while I’m completing a UI-design course this term, you’ll see the methods I’m practicing! User-centered design, heuristic evaluation, and rapid prototyping reflected in four upcoming case studies (a service site, a mini-game, an e-commerce experience, and a BI dashboard). Each one will document my full process.
+            I start with the problem someone needs to solve, then turn it into a focused, usable product. I work across interface design and implementation, refining the details through prototypes and testing. My recent projects bring coursework into one workspace and make it easier to compare changes in data, with an emphasis on clear interfaces and local storage.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="cases" class="section fade-in">
+  <section id="cases" class="section fade-in" aria-label="Selected work">
     <div class="container-fluid px-2 position-relative">
-      <div class="running-line-wrapper">
+      <div class="running-line-wrapper" aria-hidden="true">
         <div class="running-line">
-          <span>CASE STUDIES • </span>
+          <span>SELECTED WORK • </span>
         </div>
       </div>
-
       <div class="container-fluid px-2">
-        <div class="row row-cols-1 row-cols-md-2 g-4 mt-4 mb-5">
-          <div class="col d-flex">
-            <a href="service/index.html" class="case-link w-100">
+        <div class="row mt-4 mb-5">
+          <div class="col-12 col-md-4 d-flex mb-4">
+            <a href="https://github.com/cnehm006/HALt" class="case-link w-100">
               <div class="card case-card border-0">
-                <img src="imgs/service-thumbnail.jpeg" class="card-img-top" alt="Service Site">
+                <img src="imgs/halt.jpg" class="card-img-top" alt="HALt optical module workbench showing device state and live telemetry" loading="lazy">
                 <div class="card-body text-center">
-                  <h5 class="card-title">Service Site</h5>
-                  <p class="card-text">Designing a site for local service providers.</p>
+                  <h5 class="card-title">HALt</h5>
+                  <p class="card-text">Testing a simulated optical module with C++, Python and automated fault injection.</p>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col d-flex">
-            <a href="https://bombsaway-dev.github.io/minesweeper/" class="case-link w-100">
+          <div class="col-12 col-md-4 d-flex mb-4">
+            <a href="https://cnehm006.github.io/brightspacer-website/" class="case-link w-100">
               <div class="card case-card border-0">
-                <img src="imgs/game-thumbnail.png" class="card-img-top" alt="Small Game">
+                <img src="imgs/brightspacer.webp" class="card-img-top" alt="Brightspacer dashboard showing coursework and upcoming deadlines" loading="lazy">
                 <div class="card-body text-center">
-                  <h5 class="card-title">Small Game</h5>
-                  <p class="card-text">Creating an engaging browser-based game.</p>
+                  <h5 class="card-title">Brightspacer</h5>
+                  <p class="card-text">Bringing coursework, announcements and deadlines into one academic workspace.</p>
                 </div>
               </div>
             </a>
           </div>
-          <div class="col d-flex">
-            <a href="https://sab26seto.github.io/Luxe-Labels" class="case-link w-100">
+          <div class="col-12 col-md-4 d-flex mb-4">
+            <a href="https://cnehm006.github.io/followdiff/" class="case-link w-100">
               <div class="card case-card border-0">
-                <img src="imgs/ecommerce.png" class="card-img-top" alt="E-commerce Site">
+                <img src="imgs/followdiff.png" class="card-img-top" alt="FollowDiff dashboard comparing saved follower snapshots" loading="lazy">
                 <div class="card-body text-center">
-                  <h5 class="card-title">E-commerce Site</h5>
-                  <p class="card-text">Building a seamless shopping experience online.</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="col d-flex">
-            <a href="https://cnehm006.github.io/didyoushowertoday/" class="case-link w-100">
-              <div class="card case-card border-0">
-                <img src="imgs/charts.png" class="card-img-top" alt="BI Visualization">
-                <div class="card-body text-center">
-                  <h5 class="card-title">BI Visualization</h5>
-                  <p class="card-text">Visualizing shower patterns and mental health.</p>
+                  <h5 class="card-title">FollowDiff</h5>
+                  <p class="card-text">Tracking Instagram follower changes with snapshots stored in your browser.</p>
                 </div>
               </div>
             </a>
@@ -150,28 +139,32 @@
         <div class="col-12 col-lg-6 contact-heading-container">
           <h2 class="contact-heading">LET’S<br>TALK.</h2>
           <p class="contact-subtext">
-            Tell me about your project, your timeline, how you heard about me, and where you’re located.
+            Have an opportunity, a project or a question? I’d like to hear from you.
           </p>
         </div>
         <div class="col-12 col-lg-6">
-          <form class="contact-form" novalidate>
+          <form class="contact-form" action="https://formsubmit.co/cnehm006@uottawa.ca" method="post">
+            <input type="hidden" name="_subject" value="New portfolio enquiry">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" class="contact-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
             <div class="form-group">
               <label for="name">NAME *</label>
-              <input type="text" id="name" name="name" required>
+              <input type="text" id="name" name="name" autocomplete="name" maxlength="100" required>
             </div>
             <div class="form-group">
               <label for="email">EMAIL *</label>
-              <input type="email" id="email" name="email" required>
+              <input type="email" id="email" name="email" autocomplete="email" maxlength="254" required>
             </div>
             <div class="form-group">
-              <label for="company">COMPANY *</label>
-              <input type="text" id="company" name="company" required>
+              <label for="company">COMPANY (OPTIONAL)</label>
+              <input type="text" id="company" name="company" autocomplete="organization" maxlength="100">
             </div>
             <div class="form-group mb-4">
               <label for="message">MESSAGE *</label>
-              <textarea id="message" name="message" rows="4" required></textarea>
+              <textarea id="message" name="message" rows="4" maxlength="2000" required></textarea>
             </div>
-            <button type="button" class="submit-btn" aria-label="Send Message" onclick="return false;"></button>
+            <button type="submit" class="submit-btn">Send message <span aria-hidden="true">↗</span></button>
+            <p id="contact-status" class="contact-status" role="status" aria-live="polite"></p>
           </form>
         </div>
       </div>
@@ -185,8 +178,9 @@
   ></script>
 
   <script src="script.js"></script>
+  <script src="contact.js"></script>
   <footer class="footer text-center py-3">
-    <span>&copy; 2025 Chafic Nehme. Made with love.</span>
+    <span>&copy; 2026 Chafic Nehme. Made with love.</span>
   </footer>
 </body>
 </html>

@@ -85,17 +85,10 @@ function setupRunningLine() {
     el.appendChild(span);
     const containerWidth = el.parentElement.getBoundingClientRect().width;
     let contentWidth = span.getBoundingClientRect().width;
-    while (contentWidth < containerWidth * 2) {
+    while (contentWidth > 0 && contentWidth < containerWidth * 2) {
       const clone = span.cloneNode(true);
       el.appendChild(clone);
       contentWidth += span.getBoundingClientRect().width;
     }
   });
 }
-
-document.querySelectorAll('.contact-form').forEach(form => {
-  form.addEventListener('submit', function(e) {
-    e.preventDefault();
-    form.classList.add('was-validated');
-  });
-});

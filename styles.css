@@ -220,7 +220,9 @@ html {
 .case-card .card-img-top {
   width: 100%;
   height: auto;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  object-position: top;
   flex: 0 0 auto;
   transition: none;
 }
@@ -258,22 +260,19 @@ html {
   cursor: url('imgs/comingsoon.png') 16 16, auto;
 }
 
-.navbar-nav .nav-item:last-child .navbar-brand:hover {
-  cursor: url('imgs/comingsoon.png') 16 16, auto;
-}
-
 .submit-btn {
-  background: url('imgs/arrow.png') no-repeat center/contain;
-  border: none;
-  width: 3.5rem;
-  height: 3.5rem;
+  background: #111;
+  color: #fff;
+  border: 1px solid #111;
+  padding: 0.85rem 1.25rem;
+  border-radius: 0.25rem;
+  font-weight: 600;
   cursor: pointer;
   margin-top: 1rem;
 }
 
 .submit-btn:hover {
-  background-image: url('imgs/reversearrow.png');
-  cursor: url('imgs/comingsoon.png') 16 16, auto;
+  background: #333;
 }
 
 .extra-space {
@@ -332,7 +331,8 @@ html {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: none;
+  outline: 2px solid #333;
+  outline-offset: 4px;
   border-bottom: 1px solid #000;
 }
 
@@ -349,3 +349,28 @@ html {
 .contact-form textarea:required:valid {
   border-bottom: 1px solid #000;
 }
+
+.section { scroll-margin-top: 5rem; }
+.case-link:focus-visible .case-card { border-radius: 5rem; }
+.contact-status { color: #555; font-size: .9rem; line-height: 1.6; }
+.contact-status { margin-top: 1rem; }
+.contact-form textarea { resize: vertical; }
+a:focus-visible, button:focus-visible { outline: 2px solid #111; outline-offset: 5px; }
+
+@media (max-width: 767px) {
+  .hero-name { font-size: clamp(3.5rem, 17vw, 8rem); }
+  .about-text { font-size: clamp(2rem, 8vw, 4rem); }
+  .work-title { font-size: clamp(2rem, 8vw, 3.5rem); }
+  .contact-heading { font-size: clamp(4rem, 18vw, 6rem); }
+  .navbar-collapse { background: rgba(255,255,255,.98); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .running-line { animation: none; }
+  .fade-in { opacity: 1; transform: none; transition: none; }
+  #image-trail { display: none; }
+}
+
+.contact-honeypot { display: none; }
+.submit-btn:disabled { opacity: .6; cursor: wait; }
