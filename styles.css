@@ -261,18 +261,16 @@ html {
 }
 
 .submit-btn {
-  background: #111;
-  color: #fff;
-  border: 1px solid #111;
-  padding: 0.85rem 1.25rem;
-  border-radius: 0.25rem;
-  font-weight: 600;
+  background: url('imgs/arrow.png') no-repeat center/contain;
+  border: none;
+  width: 3.5rem;
+  height: 3.5rem;
   cursor: pointer;
   margin-top: 1rem;
 }
 
 .submit-btn:hover {
-  background: #333;
+  background-image: url('imgs/reversearrow.png');
 }
 
 .extra-space {

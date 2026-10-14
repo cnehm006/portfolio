@@ -16,8 +16,6 @@ contactForm.addEventListener('submit', async event => {
   submitButton.disabled = true;
   contactForm.setAttribute('aria-busy', 'true');
   contactStatus.textContent = 'Sending your message…';
-  const originalButton = submitButton.innerHTML;
-  submitButton.textContent = 'Sending…';
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 20000);
   try {
@@ -50,7 +48,6 @@ contactForm.addEventListener('submit', async event => {
     clearTimeout(timeout);
     sending = false;
     submitButton.disabled = false;
-    submitButton.innerHTML = originalButton;
     contactForm.removeAttribute('aria-busy');
   }
 });
